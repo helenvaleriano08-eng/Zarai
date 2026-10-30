@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítulo 18 | Para Zarai ♡</title>
+<style>
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff9f8;
+    color: #795864;
+    overflow-x: hidden;
+}
+:root {
+    --rosa: #c78399;
+    --rosa-oscuro: #a9657e;
+    --rosa-claro: #f9e4e9;
+    --rosa-suave: #fff1f3;
+    --blanco: #fffdfc;
+    --texto: #795864;
+}
+/* =====================================
+   BOTONES
+===================================== */
+button {
+    font-family: Georgia, serif;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+}
+button:hover {
+    transform: translateY(-3px);
+}
+/* =====================================
+   PORTADA
+===================================== */
+.portada {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #f5dce5,
+        #fff4f1,
+        #f8e1e9
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 30px;
+
+    position: relative;
+}
+
+.portada::before {
+    content: "✿";
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    font-size: 45px;
+    color: #d9a1b1;
+    opacity: .6;
+}
+
+.portada::after {
+    content: "♡";
+    position: absolute;
+    bottom: 13%;
+    right: 12%;
+    font-size: 60px;
+    color: #d9a1b1;
+    opacity: .6;
+}
+
+.flor-portada {
+    font-size: 65px;
+    animation: flotar 3s infinite ease-in-out;
+}
+
+.portada small {
+    letter-spacing: 5px;
+    color: #a87386;
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+.portada h1 {
+    color: #bb788f;
+    font-size: clamp(45px, 8vw, 78px);
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.portada h2 {
+    color: #a87386;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    max-width: 550px;
+    line-height: 2;
+    font-size: 17px;
+}
+
+.portada button {
+    background: #c78399;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 35px;
+    margin-top: 35px;
+    font-size: 15px;
+}
+
+.portada button:hover {
+    background: #a9657e;
+}
+
+.portada .fecha {
+    position: absolute;
+    bottom: 25px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #a87386;
+}
+
+/* =====================================
+   SECCIONES GENERALES
+===================================== */
+
+section {
+    padding: 85px 22px;
+    text-align: center;
+}
+
+.etiqueta {
+    color: #b98093;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+
+.titulo {
+    font-size: clamp(27px, 5vw, 39px);
+    color: #b8758c;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    max-width: 680px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* =====================================
+   INTRODUCCIÓN
+===================================== */
+
+.introduccion {
+    background: #fffaf9;
+}
+
+.introduccion-contenido {
+    max-width: 730px;
+    margin: 35px auto 0;
+    font-size: 17px;
+    line-height: 2.2;
+}
+
+.introduccion-contenido p {
+    margin-bottom: 22px;
+}
+
+.decoracion {
+    font-size: 27px;
+    margin-top: 25px;
+}
+
+/* =====================================
+   NUESTRA HISTORIA
+===================================== */
+
+.historia {
+    background: #fbedf0;
+}
+
+.historia-contenido {
+    max-width: 720px;
+    margin: 35px auto;
+    text-align: left;
+}
+
+.historia-item {
+    padding: 27px 30px;
+    margin-bottom: 22px;
+    background: white;
+    border-left: 3px solid #d59bac;
+    border-radius: 5px;
+    line-height: 2;
+    box-shadow: 0 3px 15px #e9d2d9;
+}
+
+.historia-item h3 {
+    color: #b8758c;
+    font-weight: normal;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+/* =====================================
+   BTS Y GUSTOS COMPARTIDOS
+===================================== */
+
+.bts {
+    background: linear-gradient(
+        135deg,
+        #fff9f8,
+        #f7eaf1
+    );
+}
+
+.bts-contenido {
+    max-width: 720px;
+    margin: 35px auto;
+    line-height: 2.2;
+    font-size: 17px;
+}
+
+.bts-contenido p {
+    margin-bottom: 22px;
+}
+
+.bts-destacado {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #ead3db;
+    color: #a9657e;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+/* =====================================
+   GALERÍA DE FOTOGRAFÍAS
+===================================== */
+
+.galeria-seccion {
+    background: #fffaf9;
+}
+
+.galeria {
+    max-width: 1000px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.foto {
+    background: white;
+    padding: 13px 13px 22px;
+    box-shadow: 0 6px 25px #e9d3d9;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.foto:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.foto:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.foto:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.foto img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.foto .numero {
+    color: #c78399;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 17px;
+}
+
+.foto p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* =====================================
+   FRASE
+===================================== */
+
+.frase {
+    background: linear-gradient(
+        135deg,
+        #f9e4e9,
+        #fff4f0
+    );
+    padding: 80px 25px;
+    text-align: center;
+}
+
+.frase p {
+    max-width: 750px;
+    margin: auto;
+    color: #b8758c;
+    font-size: clamp(22px, 4vw, 31px);
+    font-style: italic;
+    line-height: 1.9;
+}
+
+/* =====================================
+   CARTA PRINCIPAL
+===================================== */
+
+.carta-seccion {
+    background: #fffaf9;
+}
+
+.carta {
+    max-width: 790px;
+    margin: 40px auto 0;
+    background: white;
+    padding: 50px;
+    text-align: left;
+    line-height: 2.15;
+    font-size: 16px;
+    box-shadow: 0 5px 30px #eedce1;
+    border-radius: 8px;
+}
+
+.carta::before {
+    content: "♡";
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    color: #d59bac;
+    margin-bottom: 25px;
+}
+
+.carta p {
+    margin-bottom: 23px;
+}
+
+.firma {
+    text-align: right;
+    color: #b8758c;
+    font-style: italic;
+    margin-top: 35px;
+}
+
+/* =====================================
+   CAPÍTULO 18
+===================================== */
+
+.dieciocho {
+
+    background: linear-gradient(
+        135deg,
+        #f7dce5,
+        #fff2ed,
+        #f7e1e8
+    );
+
+}
+
+.numero-grande {
+    font-size: clamp(110px, 20vw, 165px);
+    color: #bd8296;
+    font-weight: normal;
+    margin: 20px 0;
+    line-height: 1;
+}
+
+.mensaje-18 {
+    max-width: 720px;
+    margin: 30px auto;
+    line-height: 2.2;
+    font-size: 17px;
+}
+
+.mensaje-18 p {
+    margin-bottom: 22px;
+}
+
+/* =====================================
+   DESEOS
+===================================== */
+
+.deseos {
+    background: #fffaf9;
+}
+
+.deseos-grid {
+    max-width: 900px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.deseo {
+    background: #fff0f3;
+    padding: 30px 23px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.deseo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px #ecd3db;
+}
+
+.deseo span {
+    font-size: 38px;
+}
+
+.deseo h3 {
+    color: #b8758c;
+    font-weight: normal;
+    margin: 15px 0;
+    font-size: 19px;
+}
+
+.deseo p {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   NUESTRA AMISTAD
+===================================== */
+
+.amistad {
+    background: #fbedf0;
+}
+
+.amistad-contenido {
+    max-width: 720px;
+    margin: 35px auto;
+    line-height: 2.2;
+    font-size: 17px;
+}
+
+.amistad-contenido p {
+    margin-bottom: 22px;
+}
+
+.amistad-destacada {
+    background: white;
+    padding: 32px;
+    margin-top: 35px;
+    border-radius: 12px;
+    color: #b8758c;
+    font-size: 22px;
+    font-style: italic;
+    box-shadow: 0 5px 20px #ead3db;
+}
+
+/* =====================================
+   CARTA PARA EL FUTURO
+===================================== */
+
+.futuro {
+    background: #fffaf9;
+}
+
+.futuro-carta {
+    max-width: 720px;
+    margin: 35px auto;
+    padding: 40px;
+    background: #fbedf0;
+    border-radius: 12px;
+    line-height: 2.1;
+    font-size: 16px;
+    text-align: left;
+}
+
+.futuro-carta p {
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   SORPRESA FINAL
+===================================== */
+
+.final {
+    background: linear-gradient(
+        135deg,
+        #f6dce5,
+        #fff1f3
+    );
+}
+
+.final button {
+    background: #bd8296;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 35px;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.final button:hover {
+    background: #a9657e;
+}
+
+.mensaje-sorpresa {
+    display: none;
+    max-width: 680px;
+    margin: 35px auto;
+    padding: 40px;
+    background: #fffaf9;
+    border-radius: 15px;
+    line-height: 2.2;
+    box-shadow: 0 5px 25px #e8cbd4;
+    animation: aparecer 1s;
+}
+
+.mensaje-sorpresa h2 {
+    color: #b8758c;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.mensaje-sorpresa p {
+    margin-bottom: 18px;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+footer {
+    background: #f1d8e0;
+    text-align: center;
+    padding: 40px 20px;
+    line-height: 2;
+    color: #a16e80;
+}
+
+footer .corazon-final {
+    font-size: 25px;
+    margin-top: 12px;
+}
+
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.corazon-flotante {
+    position: fixed;
+    bottom: -30px;
+    color: #d99caf;
+    pointer-events: none;
+    z-index: 20;
+    animation: subir 8s linear forwards;
+}
+
+@keyframes subir {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width: 650px) {
+
+    .portada h1 {
+        font-size: 43px;
+    }
+
+    section {
+        padding: 65px 18px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 30px;
+    }
+
+    .foto img {
+        height: 350px;
+    }
+
+    .carta {
+        padding: 27px;
+        font-size: 15px;
+    }
+
+    .deseos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .historia-item {
+        padding: 22px;
+    }
+
+    .futuro-carta {
+        padding: 27px;
+    }
+
+    .mensaje-sorpresa {
+        padding: 27px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     PORTADA
+===================================== -->
+
+<header class="portada">
+
+    <div class="flor-portada">🌷</div>
+
+    <small>UN REGALITO HECHO CON MUCHO CARIÑO</small>
+
+    <h1>Capítulo 18</h1>
+
+    <h2>Para Zarai ♡</h2>
+
+    <p>
+        Una nueva etapa, nuevos sueños,
+        nuevas experiencias y muchísimas
+        historias que todavía están por escribirse.
+    </p>
+
+    <button onclick="irA('introduccion')">
+        Comenzar este pequeño recuerdo ♡
+    </button>
+
+    <div class="fecha">
+        18 AÑOS · UNA HISTORIA POR CONTINUAR
+    </div>
+
+</header>
+
+
+<!-- =====================================
+     INTRODUCCIÓN
+===================================== -->
+
+<section class="introduccion" id="introduccion">
+
+    <p class="etiqueta">PARA UNA PERSONITA ESPECIAL</p>
+
+    <h2 class="titulo">Hoy es tu día, Zarai ♡</h2>
+
+    <div class="introduccion-contenido">
+
+        <p>
+            Holaaaa, cumpleañera. Antes que nada,
+            quiero desearte un cumpleaños demasiado bonito.
+            Espero que hoy recibas muchísimo cariño,
+            que sonrías un montón y que disfrutes
+            cada segundo de este día.
+        </p>
+
+        <p>
+            Hoy cumples 18 años y no quería dejar pasar
+            esta fecha sin hacerte algo especial.
+            Quizás no sea un regalo enorme ni algo
+            que puedas guardar en una cajita,
+            pero es algo que hice pensando en ti,
+            con mucho cariño y con ganas de que
+            tengas un recuerdo bonito de este día.
+        </p>
+
+        <p>
+            Quería regalarte algo que pudieras volver
+            a abrir dentro de unos años y que,
+            al leerlo, te recuerde esta etapa,
+            las personas que conociste y todos
+            esos pequeños momentos que hicieron
+            que tu vida fuera un poquito más bonita.
+        </p>
+
+        <p>
+            Porque aunque no nos conozcamos desde
+            pequeñas, aunque nuestra amistad no tenga
+            muchísimos años, me alegra mucho que
+            nuestros caminos se hayan cruzado.
+            En poco tiempo te convertiste en alguien
+            importante para mí y eso es algo que
+            realmente valoro.
+        </p>
+
+    </div>
+
+    <div class="decoracion">🌸 ♡ 🌸</div>
+
+</section>
+
+
+<!-- =====================================
+     NUESTRA HISTORIA
+===================================== -->
+
+<section class="historia">
+
+    <p class="etiqueta">DESDE EL PRIMER CICLO HASTA HOY</p>
+
+    <h2 class="titulo">Cómo comenzó todo...</h2>
+
+    <p class="descripcion">
+        Una amistad que comenzó con timidez
+        y terminó convirtiéndose en algo muy bonito.
+    </p>
+
+    <div class="historia-contenido">
+
+        <div class="historia-item">
+
+            <h3>🌷 Primer ciclo: dos tímidas</h3>
+
+            <p>
+                Si nos ponemos a recordar cómo comenzó
+                todo, creo que es bonito pensar en
+                nuestro primer ciclo. Cuando todavía
+                no teníamos tanta confianza y ambas
+                éramos un poquito tímidas.
+            </p>
+
+            <p>
+                Quizás en ese momento no hablábamos
+                tanto como ahora, o todavía no nos
+                conocíamos lo suficiente para saber
+                todas las cosas que teníamos en común.
+                Éramos simplemente dos compañeras
+                que poco a poco iban compartiendo
+                el mismo espacio.
+            </p>
+
+        </div>
+
+
+        <div class="historia-item">
+
+            <h3>🦋 Segundo ciclo: algo cambió</h3>
+
+            <p>
+                Pero llegó el segundo ciclo y siento
+                que ahí las cosas comenzaron a cambiar.
+                Empezamos a convivir mucho más tiempo,
+                a compartir más momentos y a tener
+                más oportunidades para conocernos.
+            </p>
+
+            <p>
+                Lo que antes quizás eran pequeñas
+                conversaciones se fue convirtiendo
+                en más confianza, más risas y más
+                momentos juntas.
+            </p>
+
+            <p>
+                Y creo que fue ahí cuando comenzamos
+                a acercarnos de una manera diferente.
+            </p>
+
+        </div>
+
+
+        <div class="historia-item">
+
+            <h3>💗 Ese click tan bonito</h3>
+
+            <p>
+                Algo que me gusta mucho de nuestra
+                amistad es que siento que hicimos click
+                desde que empezamos a agarrar más confianza.
+                No sé cómo explicarlo exactamente,
+                pero simplemente fue bonito comenzar
+                a sentir que podía compartir más cosas contigo.
+            </p>
+
+            <p>
+                Es lindo cuando una persona deja de ser
+                solamente una compañera y poco a poco
+                se convierte en alguien con quien
+                quieres compartir tus días.
+            </p>
+
+        </div>
+
+
+        <div class="historia-item">
+
+            <h3>☀️ De compañeras a una amistad especial</h3>
+
+            <p>
+                Y ahora, cuando miro cómo hemos ido
+                acercándonos, me doy cuenta de que
+                hay amistades que no necesitan años
+                para empezar a significar mucho.
+            </p>
+
+            <p>
+                Porque lo importante no siempre es
+                cuánto tiempo llevas con alguien,
+                sino lo que esa persona llega a significar
+                para ti durante el tiempo que comparten.
+                Y tú te has convertido en alguien
+                que me alegra tener en mi vida.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     GUSTOS COMPARTIDOS Y BTS
+===================================== -->
+
+<section class="bts">
+
+    <p class="etiqueta">UNA DE NUESTRAS COINCIDENCIAS</p>
+
+    <h2 class="titulo">Y claro, también BTS 💜</h2>
+
+    <div class="bts-contenido">
+
+        <p>
+            Y cómo no mencionar una de las cosas
+            que también compartimos: nuestros gustos.
+            Porque qué bonito es encontrar a alguien
+            con quien puedes hablar de cosas que
+            te gustan y saber que la otra persona
+            entiende esa emoción.
+        </p>
+
+        <p>
+            Entre esas coincidencias está BTS.
+            Porque siempre es bonito compartir gustos,
+            hablar de canciones, recordar momentos,
+            emocionarnos por las mismas cosas
+            y tener esos pequeños temas que
+            solamente nosotras entendemos de la misma manera.
+        </p>
+
+        <p>
+            Me gusta que tengamos esas coincidencias,
+            porque son pequeñas partes de nuestra amistad
+            que la hacen todavía más divertida.
+            Y quién diría que entre clases, ciclos,
+            conversaciones y tantas cosas terminaríamos
+            compartiendo también gustos como ese.
+        </p>
+
+        <p>
+            Ojalá todavía nos queden muchísimas
+            conversaciones sobre BTS, canciones
+            que escuchar, momentos que comentar
+            y muchas otras cosas que seguramente
+            iremos descubriendo que tenemos en común.
+        </p>
+
+        <div class="bts-destacado">
+            "Porque las amistades también se construyen
+            compartiendo esas pequeñas cosas que nos hacen felices."
+            <br><br>
+            💜 Borahae ARMY.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     SEIS FOTOGRAFÍAS
+===================================== -->
+
+<section class="galeria-seccion">
+
+    <p class="etiqueta">NUESTRO PEQUEÑO ÁLBUM</p>
+
+    <h2 class="titulo">Seis recuerdos para guardar ♡</h2>
+
+    <p class="descripcion">
+        Seis fotografías, seis pequeños espacios
+        para guardar un poquito de esta amistad.
+        Porque espero que todavía nos queden
+        muchísimos más recuerdos por crear.
+    </p>
+
+    <div class="galeria">
+
+        <div class="foto">
+
+            <img src="foto1.png" alt="Fotografía número uno">
+
+            <div class="numero">RECUERDO 01</div>
+
+            <p>
+                Qué bonito fue coincidir contigo
+                entre tantas personas.
+            </p>
+
+        </div>
+
+
+        <div class="foto">
+
+            <img src="foto2.png" alt="Fotografía número dos">
+
+            <div class="numero">RECUERDO 02</div>
+
+            <p>
+                De esas pequeñas cosas que
+                terminan convirtiéndose en recuerdos.
+            </p>
+
+        </div>
+
+
+        <div class="foto">
+
+            <img src="foto3.png" alt="Fotografía número tres">
+
+            <div class="numero">RECUERDO 03</div>
+
+            <p>
+                Una amistad que fue creciendo
+                poquito a poquito.
+            </p>
+
+        </div>
+
+
+        <div class="foto">
+
+            <img src="foto4.png" alt="Fotografía número cuatro">
+
+            <div class="numero">RECUERDO 04</div>
+
+            <p>
+                Me alegra que seas parte
+                de esta etapa de mi vida.
+            </p>
+
+        </div>
+
+
+        <div class="foto">
+
+            <img src="foto5.png" alt="Fotografía número cinco">
+
+            <div class="numero">RECUERDO 05</div>
+
+            <p>
+                Por todas las risas y momentos
+                que todavía nos esperan.
+            </p>
+
+        </div>
+
+
+        <div class="foto">
+
+            <img src="foto6.png" alt="Fotografía número seis">
+
+            <div class="numero">RECUERDO 06</div>
+
+            <p>
+                Y que esta sea solamente
+                una pequeña parte de nuestra historia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FRASE ESPECIAL
+===================================== -->
+
+<div class="frase">
+
+    <p>
+        "No importa si no nos conocemos desde pequeñas,
+        lo bonito es que en el tiempo que llevamos
+        compartiendo hemos logrado construir
+        algo que vale la pena cuidar."
+    </p>
+
+</div>
+
+
+<!-- =====================================
+     CARTA PRINCIPAL
+===================================== -->
+
+<section class="carta-seccion">
+
+    <p class="etiqueta">CON MUCHO CARIÑO PARA TI</p>
+
+    <h2 class="titulo">Una carta para mi Saray 💌</h2>
+
+    <p class="descripcion">
+        Aunque sabemos que eres Zarai con Z e i...
+        hoy también hay un pequeño espacio
+        para nuestra querida Saray. JAJAJA.
+    </p>
+
+    <div class="carta">
+
+        <p>Holaaaa, mi querida Zarai. O mejor dicho... Saray. JAJAJA. ♡</p>
+
+        <p>
+            Primero que nada, ¡felices 18 años!
+            Espero que hoy tengas un día demasiado bonito,
+            que recibas mucho cariño, que te consientan,
+            que sonrías muchísimo y que disfrutes
+            cada momento de tu cumpleaños.
+        </p>
+
+        <p>
+            Quería hacerte algo diferente para esta fecha,
+            algo que no fuera solamente un mensaje
+            de cumpleaños que lees y después queda
+            perdido entre tantas conversaciones.
+            Quería hacerte una pequeña página con palabras
+            que puedas guardar y volver a leer cuando quieras.
+        </p>
+
+        <p>
+            Y mientras pensaba en qué escribirte,
+            comencé a recordar cómo empezó nuestra amistad.
+            Es curioso pensar que desde el primer ciclo
+            ya nos conocíamos, pero ambas éramos tímidas
+            y todavía no teníamos esa confianza
+            que tenemos ahora.
+        </p>
+
+        <p>
+            Creo que ninguna de las dos imaginaba
+            que al pasar al segundo ciclo las cosas
+            cambiarían tanto. Comenzamos a convivir
+            más tiempo, a compartir más momentos
+            y a conocernos de una manera diferente.
+            Poco a poco dejamos de ser solamente
+            compañeras para convertirnos en amigas.
+        </p>
+
+        <p>
+            Y sinceramente, me alegra muchísimo
+            que haya sucedido así. Me gusta recordar
+            cómo fuimos agarrando confianza,
+            cómo empezamos a compartir más cosas
+            y cómo se fue formando esa amistad
+            que hoy tengo la suerte de disfrutar.
+        </p>
+
+        <p>
+            Algo que también me parece bonito es
+            que tengamos gustos en común.
+            Como BTS, por ejemplo. JAJAJA.
+            Es lindo encontrar a alguien con quien
+            puedes compartir esas pequeñas cosas
+            que te emocionan, hablar de lo que te gusta
+            y saber que hay una parte de ustedes
+            que coincide.
+        </p>
+
+        <p>
+            Y aunque quizás parezcan detalles pequeños,
+            para mí son esas cosas las que hacen
+            que una amistad tenga su propia esencia.
+            Cada conversación, cada risa, cada gusto
+            compartido y cada momento van formando
+            recuerdos que poco a poco se vuelven especiales.
+        </p>
+
+        <p>
+            Quiero que sepas que, aunque no nos conozcamos
+            desde pequeñas y no tengamos una historia
+            de muchísimos años, eso no hace que nuestra
+            amistad sea menos importante.
+            A veces el tiempo no determina cuánto
+            puede llegar a significar una persona.
+        </p>
+
+        <p>
+            Porque hay personas que conocemos hace años
+            y otras que llegan hace relativamente poco,
+            pero que de alguna manera consiguen
+            hacerse un espacio en nuestra vida.
+            Y tú eres una de esas personas para mí.
+        </p>
+
+        <p>
+            En el tiempo que llevamos conociéndonos
+            te has convertido en alguien importante,
+            alguien con quien me gusta compartir
+            mis días y de quien me alegra poder decir
+            que es mi amiga.
+        </p>
+
+        <p>
+            Gracias por permitirme conocerte,
+            por cada momento compartido,
+            por las conversaciones, las risas
+            y por todas esas pequeñas cosas
+            que quizás no parecen tan grandes,
+            pero que terminan haciendo especial
+            nuestra amistad.
+        </p>
+
+        <p>
+            Ahora quiero hablarte de tus 18 años.
+            ¡Qué emoción! Una nueva etapa comienza
+            y espero que sea una de las más bonitas
+            de tu vida.
+        </p>
+
+        <p>
+            Sé que cumplir 18 puede sentirse como
+            entrar a un mundo diferente.
+            De pronto parece que vienen muchas
+            responsabilidades, decisiones y cosas nuevas.
+            Pero quiero recordarte que no tienes
+            que tener toda tu vida planeada
+            por cumplir esta edad.
+        </p>
+
+        <p>
+            No necesitas saber exactamente qué quieres,
+            ni tener todo conseguido, ni compararte
+            con las personas que parecen tener
+            su camino resuelto.
+            Todavía tienes muchísimo por descubrir.
+            Date tiempo para crecer, equivocarte,
+            aprender y volver a intentarlo.
+        </p>
+
+        <p>
+            Deseo que esta nueva etapa te traiga
+            oportunidades preciosas, que puedas
+            cumplir tus metas, conocer lugares nuevos,
+            vivir experiencias que nunca olvides
+            y descubrir muchas cosas que todavía
+            no sabes que te gustan.
+        </p>
+
+        <p>
+            Quiero que sigas siendo tú.
+            Que nunca pierdas esa esencia que te caracteriza,
+            que sigas teniendo tus gustos, tus ocurrencias,
+            tus sueños y esa forma de ser que te hace única.
+            No cambies solamente por intentar encajar
+            en lugares donde no tienes que demostrar nada.
+        </p>
+
+        <p>
+            También deseo que siempre tengas cerca
+            personas que te quieran de verdad,
+            que te respeten, que te escuchen
+            y que estén felices de verte crecer.
+            Personas con las que puedas ser tú misma
+            y con quienes no tengas que fingir nada.
+        </p>
+
+        <p>
+            Espero que tengas días maravillosos,
+            pero también mucha fortaleza para esos
+            días en los que las cosas no salgan
+            como esperabas. Que nunca te falten
+            motivos para continuar y que siempre
+            puedas recordar lo mucho que vales.
+        </p>
+
+        <p>
+            Y hablando de nosotras, quiero que sepas
+            que realmente deseo que nuestra amistad dure.
+            No quisiera que todo esto se quede solamente
+            en una etapa del instituto o en recuerdos
+            de los ciclos que compartimos.
+        </p>
+
+        <p>
+            Me gustaría que sigamos conociéndonos,
+            que todavía tengamos muchas cosas por contarnos,
+            que compartamos más gustos, más bromas,
+            más fotografías y muchas más experiencias.
+            Que incluso cuando pasen los ciclos,
+            los años o nuestras vidas tomen caminos
+            diferentes, podamos seguir conservando
+            ese cariño y esa confianza.
+        </p>
+
+        <p>
+            Quiero que algún día podamos recordar
+            cómo éramos en el primer ciclo,
+            lo tímidas que nos mostrábamos,
+            cómo cambió todo cuando comenzamos
+            a compartir más tiempo en el segundo
+            y cómo terminamos convirtiéndonos
+            en amigas.
+        </p>
+
+        <p>
+            Y quién sabe, quizás dentro de unos años
+            tengamos muchísimas más fotografías,
+            anécdotas que ahora ni imaginamos
+            y tantas historias que contar.
+            Espero que cuando llegue ese momento
+            podamos reírnos recordando todo esto.
+        </p>
+
+        <p>
+            También quiero que recuerdes que no necesitas
+            hacer algo extraordinario para ser importante
+            para alguien. A veces simplemente ser tú,
+            compartir un momento o estar presente
+            es suficiente para dejar un recuerdo bonito.
+        </p>
+
+        <p>
+            Gracias por haber coincidido conmigo,
+            por ese click que tuvimos cuando comenzamos
+            a tener más confianza y por formar parte
+            de esta etapa de mi vida.
+        </p>
+
+        <p>
+            Este pequeño regalo está hecho con mucho cariño.
+            Quería que tuvieras algo que no solamente
+            celebrara tu cumpleaños, sino que también
+            guardara un poquito de nuestra historia.
+        </p>
+
+        <p>
+            Disfruta muchísimo tus 18, Zarai.
+            Permítete vivir, aprender, soñar,
+            equivocarte, crecer y ser feliz.
+            Que nunca te falten razones para sonreír
+            ni personas que te hagan sentir querida.
+        </p>
+
+        <p>
+            Y recuerda que, aunque ahora te escriba
+            Zarai en esta carta, siempre habrá un
+            pequeño espacio para nuestra Saray.
+            JAJAJA, porque ese nombre ya es parte
+            de nuestras bromas y no pienso dejarlo ir.
+        </p>
+
+        <p>
+            Te deseo una vida llena de momentos bonitos,
+            sueños cumplidos y personas que hagan
+            que valga la pena cada etapa.
+        </p>
+
+        <div class="firma">
+            Con muchísimo cariño,
+            <br>
+            Helen. ♡
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     CAPÍTULO 18
+===================================== -->
+
+<section class="dieciocho">
+
+    <p class="etiqueta">UNA NUEVA HISTORIA COMIENZA</p>
+
+    <h2 class="titulo">Bienvenida a tu...</h2>
+
+    <div class="numero-grande">18</div>
+
+    <h2 class="titulo">Capítulo 18 ♡</h2>
+
+    <div class="mensaje-18">
+
+        <p>
+            Dieciocho años de vida, de aprendizajes,
+            de momentos que te hicieron sonreír,
+            de experiencias que te enseñaron
+            y de personas que fueron formando
+            parte de tu historia.
+        </p>
+
+        <p>
+            Ahora tienes delante una página en blanco,
+            llena de posibilidades y cosas que todavía
+            no conoces. No tengas miedo de escribir
+            tu propia historia a tu manera.
+        </p>
+
+        <p>
+            Que no te apresures por crecer,
+            que no te compares con nadie
+            y que disfrutes cada parte del camino.
+        </p>
+
+        <p>
+            Ojalá este capítulo esté lleno de aventuras,
+            nuevas oportunidades, sueños que se cumplen,
+            amistades sinceras y momentos que algún día
+            quieras volver a vivir.
+        </p>
+
+        <p>
+            Y que, cuando llegue el momento de comenzar
+            un nuevo capítulo, puedas mirar atrás
+            y sentirte orgullosa de todo lo que has vivido.
+        </p>
+
+    </div>
+
+    <div class="decoracion">🌷 ✨ 🌷</div>
+
+</section>
+
+
+<!-- =====================================
+     DESEOS
+===================================== -->
+
+<section class="deseos">
+
+    <p class="etiqueta">PARA ESTA NUEVA ETAPA</p>
+
+    <h2 class="titulo">Cosas bonitas que deseo para ti</h2>
+
+    <p class="descripcion">
+        Porque mereces que la vida te sorprenda
+        con muchísimas cosas maravillosas.
+    </p>
+
+    <div class="deseos-grid">
+
+        <div class="deseo">
+
+            <span>🌸</span>
+
+            <h3>Felicidad</h3>
+
+            <p>
+                Que nunca te falten motivos para sonreír,
+                que disfrutes las pequeñas cosas
+                y que tengas muchísimos días
+                que quieras recordar.
+            </p>
+
+        </div>
+
+        <div class="deseo">
+
+            <span>🦋</span>
+
+            <h3>Sueños cumplidos</h3>
+
+            <p>
+                Que tengas el valor de perseguir
+                lo que deseas y que cada esfuerzo
+                te acerque un poquito más
+                a la vida que quieres construir.
+            </p>
+
+        </div>
+
+        <div class="deseo">
+
+            <span>💗</span>
+
+            <h3>Amistades sinceras</h3>
+
+            <p>
+                Que encuentres personas que te valoren,
+                que celebren tus logros y que quieran
+                compartir contigo tanto los días
+                buenos como los complicados.
+            </p>
+        </div>
+        <div class="deseo">
+            <span>☀️</span>
+            <h3>Tranquilidad</h3>
+            <p>
+                Que tengas paz en tu corazón,
+                que aprendas a darte tiempo
+                y que nunca olvides que también
+                mereces descansar.
+            </p>
+        </div>
+        <div class="deseo">
+            <span>🌎</span>
+            <h3>Aventuras</h3>
+            <p>
+                Que conozcas lugares nuevos,
+                vivas experiencias inolvidables
+                y tengas historias preciosas
+                que contar algún día.
+            </p>
+        </div>
+        <div class="deseo">
+            <span>🌷</span>
+            <h3>Amor propio</h3>
+
+            <p>
+                Que nunca dudes de tu valor,
+                que te sientas orgullosa de ti
+                y que siempre recuerdes
+                lo especial que eres.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- =====================================
+     NUESTRA AMISTAD
+===================================== -->
+<section class="amistad">
+    <p class="etiqueta">ALGO QUE ESPERO DE CORAZÓN</p>
+    <h2 class="titulo">Que nuestra amistad dure mucho ♡</h2>
+    <div class="amistad-contenido">
+        <p>
+            Sé que no nos conocemos desde pequeñas,
+            que no tenemos fotografías de cuando
+            éramos niñas ni recuerdos de una infancia
+            compartida. Nuestra historia comenzó
+            mucho después, en un instituto,
+            durante un ciclo en el que quizás
+            ninguna imaginaba lo que vendría.
+        </p>
+        <p>
+            Pero creo que eso también tiene algo bonito.
+            No todas las amistades necesitan comenzar
+            desde la infancia para convertirse
+            en algo importante.
+        </p>
+        <p>
+            A veces basta con coincidir en el momento
+            indicado, compartir tiempo, tener confianza
+            y permitir que una amistad crezca
+            de manera natural.
+        </p>
+        <p>
+            Y eso es lo que espero que siga pasando
+            con nosotras. Que no importa cuántos ciclos
+            pasen, cuántas cosas cambien o cuántas
+            nuevas etapas lleguen, podamos seguir
+            encontrando motivos para compartir momentos.
+        </p>
+        <p>
+            No espero que todos los días sean iguales,
+            porque sé que cada una tendrá sus propias
+            responsabilidades, sueños y caminos.
+            Pero sí espero que nunca perdamos
+            ese cariño que hemos ido construyendo.
+        </p>
+        <p>
+            Quiero que todavía tengamos muchas
+            fotografías que agregar a este pequeño álbum,
+            muchas conversaciones que recordar
+            y muchas bromas que solamente nosotras
+            entenderemos.
+        </p>
+        <p>
+            Y sobre todo, quiero que sepas que me alegra
+            haberte encontrado. Gracias por ser parte
+            de mi historia, así como espero que
+            yo también pueda formar parte
+            de algunos de tus recuerdos bonitos.
+        </p>
+        <div class="amistad-destacada">
+            "No importa que no nos conozcamos
+            desde pequeñas. Me alegra que,
+            aunque haya sido después,
+            la vida nos haya permitido coincidir."
+        </div>
+    </div>
+</section>
+<!-- =====================================
+     PARA SU YO DEL FUTURO
+===================================== -->
+<section class="futuro">
+    <p class="etiqueta">PARA CUANDO VUELVAS A LEER ESTO</p>
+    <h2 class="titulo">Una pequeña cápsula del tiempo 💌</h2>
+    <p class="descripcion">
+        Zarai, si algún día encuentras nuevamente
+        esta página, quiero que leas esto.
+    </p>
+    <div class="futuro-carta">
+        <p>Hola, Zarai del futuro. ♡</p>
+        <p>
+            No sé cuántos años tendrás cuando vuelvas
+            a abrir esta página. Quizás 20, 22, 25
+            o incluso muchos más.
+        </p>
+        <p>
+            Quizás ahora tengas nuevos sueños,
+            hayas conocido muchísimas personas,
+            hayas vivido experiencias que hoy
+            ni siquiera imaginas y tu vida
+            sea completamente diferente.
+        </p>
+        <p>
+            Pero espero que, al leer estas palabras,
+            puedas recordar con cariño aquella etapa
+            en la que estabas cumpliendo 18 años.
+        </p>
+        <p>
+            Recuerda cómo comenzó todo desde el primer ciclo,
+            cuando todavía éramos tímidas,
+            cómo las cosas cambiaron al pasar al segundo
+            y cómo poco a poco fuimos construyendo
+            una amistad.
+        </p>
+        <p>
+            Recuerda nuestras conversaciones,
+            nuestros gustos compartidos,
+            las bromas, las risas y hasta nuestro
+            querido nombre de Saray.
+            JAJAJA, espero que todavía te dé risa.
+        </p>
+        <p>
+            Quizás con los años olvidemos algunos detalles
+            de este día, pero espero que nunca olvides
+            lo bonito que fue comenzar esta amistad.
+        </p>
+        <p>
+            Esta página fue hecha por Helen,
+            una amiga que quiso dedicarte un pedacito
+            de su tiempo para celebrar tus 18 años
+            y recordarte lo importante que te volviste
+            en su vida en tan poco tiempo.
+        </p>
+        <p>
+            Ojalá la vida te haya regalado muchas
+            experiencias bonitas y que todavía
+            conserves esa esencia que te hace ser tú.
+        </p>
+        <p>
+            Y si todavía seguimos compartiendo
+            momentos cuando leas esto, espero
+            que tengamos muchísimas más historias
+            que contar y fotografías que recordar.
+        </p>
+        <p>
+            Cuídate mucho, sigue creciendo,
+            sigue soñando y nunca olvides
+            que mereces una vida preciosa.
+        </p>
+        <p style="text-align:right; color:#b8758c;">
+            Con cariño, desde el comienzo de tus 18.
+            <br>
+            Helen. ♡
+        </p>
+    </div>
+</section>
+<!-- =====================================
+     SORPRESA FINAL
+===================================== -->
+<section class="final">
+    <p class="etiqueta">Y ANTES DE TERMINAR...</p>
+    <h2 class="titulo">Una última cosita, Saray 🎀</h2>
+    <p class="descripcion">
+        No podía terminar este pequeño regalo
+        sin dejarte unas últimas palabras.
+    </p>
+    <button onclick="mostrarSorpresa()">
+        Abrir mi última sorpresa ♡
+    </button>
+    <div class="mensaje-sorpresa" id="sorpresa">
+        <h2>¡FELICES 18 AÑOS, ZARAI! 🎂</h2>
+        <p>
+            Quizás con los años olvidemos algunos
+            detalles de este día, pero espero
+            que nunca olvides lo bonito que fue
+            comenzar esta amistad.
+        </p>
+        <p>
+            Espero que esta nueva etapa te regale
+            momentos maravillosos, personas sinceras,
+            muchísimos sueños cumplidos y experiencias
+            que te hagan sentir feliz de estar viviendo.
+        </p>
+        <p>
+            Gracias por haber coincidido conmigo,
+            por ese click que tuvimos al comenzar
+            a tener más confianza y por convertirte
+            en alguien importante en mi vida.
+        </p>
+        <p>
+            No sé cuántas páginas tendrá nuestra historia,
+            pero espero que todavía nos queden
+            muchísimos capítulos por compartir.
+        </p>
+        <p>
+            Que nunca nos falten las risas,
+            las conversaciones, las fotografías,
+            BTS y, por supuesto, las bromas
+            JAJAJA.
+        </p>
+        <br>
+        <h2>Te quiero mucho. ♡</h2>
+        <p>
+            Sigue brillando, sigue siendo tú
+            y disfruta muchísimo tus 18 años.
+        </p>
+        <div style="font-size:38px; margin-top:25px;">
+            🌷 💗 🦋
+        </div>
+        <p style="margin-top:25px; color:#b8758c;">
+            Con muchísimo cariño,
+            <br>
+            Helen.
+        </p>
+    </div>
+</section>
+<!-- =====================================
+     PIE DE PÁGINA
+===================================== -->
+<footer>
+    <p>
+        Una pequeña página, hecha con muchísimo cariño.
+    </p>
+    <p>
+        Para Zarai, en el comienzo de su capítulo 18.
+    </p>
+    <div class="corazon-final">
+        ♡ 🌷 ♡
+    </div>
+    <p style="font-size:12px; margin-top:15px;">
+        Una amistad que comenzó en el instituto
+        y muchos recuerdos que todavía están por venir.
+    </p>
+    <p style="margin-top:20px;">
+        Atentamente, Helen.
+    </p>
+</footer>
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+<script>
+// Ir a una sección
+function irA(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+// Mostrar la sorpresa final
+function mostrarSorpresa() {
+    const caja = document.getElementById("sorpresa");
+    caja.style.display = "block";
+    caja.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+// Crear corazones flotantes
+function crearCorazon() {
+    const corazon = document.createElement("div");
+    corazon.className = "corazon-flotante";
+    corazon.innerHTML = "♡";
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+    document.body.appendChild(corazon);
+    setTimeout(() => {
+        corazon.remove();
+    }, 8000);
+}
+// Un corazón cada segundo
+setInterval(crearCorazon, 1000);
+</script>
+</body>
+</html>
